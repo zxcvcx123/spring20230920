@@ -3,6 +3,7 @@ package com.example.spring20230920.controller;
 import com.example.spring20230920.domain.MyDto10;
 import com.example.spring20230920.domain.MyDto9;
 import com.example.spring20230920.domain.Student;
+import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -93,5 +94,22 @@ public class Controller10 {
 
         model.addAttribute("l", List.of(9,8,7,6,5,4,3,2));
         model.addAttribute("r", List.of(1,2,3,4,5,6,7,8,9));
+    }
+
+    @RequestMapping("sub8")
+    public void method8(Model model){
+        model.addAttribute("a", 3);
+        model.addAttribute("b", 5);
+    }
+
+    @RequestMapping("sub9")
+    public void method9(Model model){
+        model.addAttribute("a", "java");
+        model.addAttribute("b", "");
+        model.addAttribute("c", List.of(3,4));
+        model.addAttribute("d", List.of());
+        model.addAttribute("e", Map.of("name", "son"));
+        model.addAttribute("f", Map.of());
+        model.addAttribute("g", null);
     }
 }
