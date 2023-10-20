@@ -1,0 +1,17 @@
+-- DATABASE, SCHEMA : 테이블들이 있는 공간
+
+
+-- DATABASE, SCHEMA 만들기
+CREATE DATABASE 데이터베이스명;
+CREATE DATABASE mydb1;
+CREATE SCHEMA mydb2;
+-- DATABASE 옮기기
+USE mydb1;
+-- DATABASE 지우기
+DROP DATABASE mydb2;
+DROP DATABASE mydb1;
+USE w3schools;
+
+CREATE DATABASE mydb1;
+USE mydb1;
+-- Table 만들기

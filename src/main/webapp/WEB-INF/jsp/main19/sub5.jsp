@@ -45,5 +45,6 @@
         </tr>
     </c:forEach>
 </table>
+<a href="/main19/sub8">상품번호 조회하기</a>
 </body>
 </html>

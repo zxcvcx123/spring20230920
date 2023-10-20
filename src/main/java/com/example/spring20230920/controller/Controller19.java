@@ -3,6 +3,7 @@ package com.example.spring20230920.controller;
 import com.example.spring20230920.domain.MyDto14;
 import com.example.spring20230920.domain.MyDto15;
 import com.example.spring20230920.domain.MyDto16;
+import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -218,4 +219,122 @@ public class Controller19 {
 
         return "/main19/sub5";
     }
+
+
+    @GetMapping("sub8")
+    public void method8() {
+
+    }
+
+    @GetMapping("sub9")
+    public String method9(String pid, Model model, MyDto16 mydto16) throws Exception {
+
+        String sql = """
+                SELECT ProductID, ProductName, Unit, Price
+                FROM products
+                WHERE ProductID =
+                """;
+        sql += pid;
+
+        Connection con = dataSource.getConnection();
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+
+        List<MyDto16> list = new ArrayList<>();
+
+        try (con; stmt; rs;) {
+            while (rs.next()) {
+                mydto16.setPid(rs.getString(1));
+                mydto16.setProductName(rs.getString(2));
+                mydto16.setUnit(rs.getString(3));
+                mydto16.setPrice(rs.getString(4));
+                list.add(mydto16);
+            }
+        }
+
+        model.addAttribute("productList", list);
+
+        return "/main19/sub5";
+    }
+
+    @GetMapping("sub10")
+    public void method10() {
+
+    }
+
+    @GetMapping("sub11")
+    public String method11(Integer cid, Model model, MyDto15 mydto15) throws Exception {
+
+        String sql =
+                """
+                        SELECT CustomerID, CustomerName, Address, Country
+                        FROM customers
+                        WHERE CustomerID =
+                        """;
+        sql += cid;
+
+
+        List<MyDto15> list = new ArrayList<>();
+
+        Connection con = dataSource.getConnection();
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+
+        try (con; stmt; rs;) {
+            while (rs.next()) {
+                mydto15.setId(rs.getInt(1));
+                mydto15.setName(rs.getString(2));
+                mydto15.setAddress(rs.getString(3));
+                mydto15.setCountry(rs.getString(4));
+                list.add(mydto15);
+            }
+        }
+
+        model.addAttribute("customerList", list);
+
+        return "/main19/sub6";
+    }
+
+    @GetMapping("sub12")
+    public void method12() {
+
+    }
+
+    @GetMapping("sub13")
+    public String method13(String country, Model model, MyDto15 myDto15) throws Exception {
+
+        String sql =
+                """
+                SELECT CustomerID, CustomerName, Address, Country
+                FROM customers
+                WHERE Country LIKE 
+                """ + "'%" + country + "%'";
+
+        System.out.println(sql);
+        List<MyDto15> list = new ArrayList<>();
+
+        Connection con = dataSource.getConnection();
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+
+        try (con; stmt; rs;) {
+            while (rs.next()) {
+                myDto15.setId(rs.getInt(1));
+                myDto15.setName(rs.getString(2));
+                myDto15.setAddress(rs.getString(3));
+                myDto15.setCountry(rs.getString(4));
+                list.add(myDto15);
+            }
+        }
+
+        for(MyDto15 item: list){
+            System.out.println(item);
+        }
+        model.addAttribute("customerList", list);
+        return "/main19/sub6";
+    }
+
+
+
+
 }

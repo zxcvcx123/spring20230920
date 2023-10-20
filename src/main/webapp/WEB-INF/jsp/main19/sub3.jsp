@@ -17,12 +17,12 @@
 <table>
     <tr>
         <th>ID</th>
-        <th>NAME</th>
         <th>PHONE</th>
     </tr>
     <c:forEach var="shippers" items="${shippers}">
         <tr>
-            <td>${shippers.id}</td>
+
+            <th>NAME</th>      <td>${shippers.id}</td>
             <td>${shippers.name}</td>
             <td>${shippers.phone}</td>
         </tr>

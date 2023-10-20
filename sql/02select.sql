@@ -60,7 +60,7 @@ SELECT COUNT(DISTINCT country) FROM suppliers;
 SELECT COUNT(OrderDate) FROM orders;
 
 -- 예) 몇 개의 카테고리가 있는지 조회
-SELECT COUNT(DISTINCT CategoryName) FROM categories;
+SELECT *, COUNT(DISTINCT CategoryName) FROM categories;
 
 -- 예) 고객이 있는 도시의 수
 SELECT COUNT(DISTINCT City) FROM customers;

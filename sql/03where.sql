@@ -33,3 +33,7 @@ SELECT SupplierName, Phone FROM suppliers WHERE Country = 'Japan';
 
 -- 예) 2번 카테고리의 이름(categoryName) 조회
 SELECT CategoryName FROM categories WHERE CategoryID = '2';
+
+SELECT CustomerID, CustomerName, Address, Country
+FROM w3schools.customers
+WHERE Country LIKE '%U';

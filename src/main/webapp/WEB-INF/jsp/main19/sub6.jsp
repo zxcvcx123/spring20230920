@@ -45,5 +45,7 @@
         </tr>
     </c:forEach>
 </table>
+<a href="/main19/sub10">고객번호 조회하기</a> <br>
+<a href="/main19/sub12">국가별 조회하기</a>
 </body>
 </html>
