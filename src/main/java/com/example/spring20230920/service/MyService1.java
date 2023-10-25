@@ -1,4 +1,4 @@
-package com.example.spring20230920.serice;
+package com.example.spring20230920.service;
 
 import com.example.spring20230920.dao.MyDao6;
 import lombok.RequiredArgsConstructor;
