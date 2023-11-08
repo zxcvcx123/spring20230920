@@ -22,8 +22,8 @@ public class Controller39 {
     private final MyService2 service;
 
     @GetMapping("sub0")
-    public void method0() {
-
+    public String method0() {
+        return "view1";
     }
 
     @GetMapping("sub1")
@@ -81,7 +81,6 @@ public class Controller39 {
         } else {
             return ResponseEntity.badRequest().build();
         }
-
     }
 
     @GetMapping("sub7")

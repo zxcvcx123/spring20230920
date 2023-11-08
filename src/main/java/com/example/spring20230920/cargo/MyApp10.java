@@ -1,6 +1,5 @@
-package com.example.spring20230920;
+package com.example.spring20230920.cargo;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

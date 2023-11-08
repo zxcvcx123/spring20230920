@@ -11,10 +11,25 @@
     <title>Title</title>
 </head>
 <body>
-<h1>첫 jsp 페이지</h1>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur, consequuntur distinctio dolores ducimus enim facilis illo labore molestiae repellendus. Consequuntur ipsam neque porro quia repellendus similique vel veritatis voluptates.
-</p>
+<h1>어떤 페이지</h1>
+
+<button id="btn" class="btnClass" value="hello" onclick="btn(event)">
+    버튼
+</button>
+
+<script>
+    function btn(e){
+      console.log("target : "+ e.target)
+      console.log("target.type : "+e.target.type)
+      console.log("target.id : "+e.target.id)
+      console.log("target.className : "+e.target.className)
+      console.log("target.value : "+e.target.value)
+
+    }
+</script>
+
+
 
 </body>
+
 </html>

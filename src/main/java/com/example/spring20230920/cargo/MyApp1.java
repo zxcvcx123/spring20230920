@@ -1,4 +1,4 @@
-package com.example.spring20230920;
+package com.example.spring20230920.cargo;
 
 public class MyApp1 {
 
@@ -12,7 +12,6 @@ public class MyApp1 {
 }
 
 class MyClass1 {
-
     public void method1(){
         System.out.println("MyClass1.method1");
     }

@@ -11,7 +11,6 @@ public class MyService2 {
 
     private final MyDao9 dao;
 
-
     public boolean validata(MyDto33 dto) {
         if (dto.getBirthDate() == null) {
             return false;

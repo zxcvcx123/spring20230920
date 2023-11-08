@@ -11,7 +11,6 @@ import java.util.Map;
 @Mapper
 public interface MyDao7 {
 
-
     @Select("""
             SELECT *
             FROM w3schools.customers
